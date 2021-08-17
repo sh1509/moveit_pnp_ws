@@ -1,0 +1,77 @@
+# NOTE: These are poses of the SHELF locations and NOT the grasp pose of the robot
+
+shelves:
+  display_shelf:
+    id_0:
+      orientation:
+        w: 0.7071068
+        x: 0.0
+        y: 0.0
+        z: 0.7071068
+      position:
+        x: 0.244
+        y: 0.417
+        z: 0.681
+    id_1:
+      orientation:
+        w: 0.7071068
+        x: 0.0
+        y: 0.0
+        z: 0.7071068
+      position:
+        x: -0.201
+        y: 0.400
+        z: 0.409
+    id_2:
+      orientation:
+        w: 0.7071068
+        x: 0.0
+        y: 0.0
+        z: 0.7071068
+      position:
+        x: 0.513
+        y: 0.424
+        z: 0.095
+  stock_shelf:
+    id_0:
+      orientation:
+        w: 0.215117
+        x: 0.514747
+        y: -0.524716
+        z: 0.642987
+      position:
+        x: 0.488
+        y: -0.407
+        z: 0.694
+      size:
+        x: 0.1
+        y: 0.09
+        z: 0.31
+    id_1:
+      orientation:
+        w: 0.215117
+        x: 0.514747
+        y: -0.524716
+        z: 0.642987
+      position:
+        x: 0.556
+        y: -0.382
+        z: 0.404
+      size:
+        x: 0.1
+        y: 0.09
+        z: 0.31
+    id_2:
+      orientation:
+        w: 0.215117
+        x: 0.514747
+        y: -0.524716
+        z: 0.642987
+      position:
+        x: 0.501
+        y: -0.434
+        z: 0.141
+      size:
+        x: 0.1
+        y: 0.09
+        z: 0.31

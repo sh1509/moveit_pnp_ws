@@ -1,0 +1,12 @@
+#goal
+string shelf
+int16 move_id    # = -1 if no move action
+bool pick        # is false when no pick operation
+bool place       # is false when no place operation
+---
+#result
+bool done
+geometry_msgs/Pose final_pose
+---
+#feedback
+geometry_msgs/Pose current_pose

@@ -1,0 +1,24 @@
+<launch>
+
+    <!-- Launch Franka Panda moveit scene-->
+    <include file="$(find panda_moveit_config)/launch/demo.launch"/>
+
+    <!-- Delay the launch so that it can load object to be manipulated -->
+    <arg name="node_start_delay" default="1.0" />
+
+    <!-- Launch all action server -->
+    <node name="moveit_pnp_server" pkg="moveit_pnp_server" type="moveit_pnp_server_node" respawn="false" output="screen"
+                                                    launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "></node>
+    <node name="marker_recog_server" pkg="marker_recog_server" type="marker_recog_server_node" respawn="false" output="screen"></node>
+    <node name="object_recog_server" pkg="object_recog_server" type="object_recog_server_node" respawn="false" output="screen"></node>
+    <node name="placement_recog_server" pkg="placement_recog_server" type="placement_recog_server_node" respawn="false" output="screen"></node>
+
+    <!-- Launch the pick place client -->
+    <node name="pick_place_client" pkg="pick_place_client" type="pick_place_client_node" respawn="false" output="screen"></node>
+
+    <!-- Load the scene geometry from the .scene file-->
+    <arg name="scene_file" default="$(find moveit_pnp_server)/meshes/backyard.scene"/>
+    <rosparam command="load" file="$(find moveit_pnp_server)/config/shelves.yaml" />
+    <node name = "moveit_publish_scene_from_text" pkg= "moveit_ros_planning" type = "moveit_publish_scene_from_text" args= "$(arg scene_file)"/>
+
+</launch>

@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"] 
+  path = src/panda_moveit_config 
+  url = https://github.com/ros-planning/panda_moveit_config.git

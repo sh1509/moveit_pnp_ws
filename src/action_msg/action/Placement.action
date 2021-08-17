@@ -1,0 +1,8 @@
+#goal
+string act #recognize the placement
+---
+#result
+bool done
+---
+#feedback
+int32 counter
